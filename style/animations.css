@@ -13,4 +13,10 @@
     }
 }
 
+/* Cover Animations */
+@keyframes aboutMeSkillsFillIn {
+    to {
+        background-color: #1C4DCA;
+    }
+}
 

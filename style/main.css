@@ -4,7 +4,11 @@
 
 :root {
     --background-color: #10100E;
-    --first-color: #8597A1;
+    --cover-main-color: #8597A1;
+    --about-me-first-color: #9FA990;
+    --about-me-second-color: #D0D2C5;
+    --about-me-third-color: #1C4DCA;
+    --about-me-fourth-color: #99B0BD;
 
     --main-font: 'GeneralSans-Semibold';
     --main-font-medium: 'GeneralSans-Medium';
@@ -13,6 +17,11 @@
 
 body {
     background-color: var(--background-color);
+}
+
+hr {
+    margin: 0;
+    height: 5px;
 }
 
 /* Start Header */
@@ -54,7 +63,7 @@ body {
 
 .header .links a {
     text-decoration: none;
-    color: var(--first-color);
+    color: var(--cover-main-color);
     font-size: 1.5rem;
     font-family: var(--main-font-medium);
     transition: 0.2s;
@@ -67,7 +76,7 @@ body {
 
 /* Start Cover */
 .cover .text h1 {
-    color: var(--first-color);
+    color: var(--cover-main-color);
     margin: 0;
     font-family: var(--main-font);
     transform: translateX(-2.5px);
@@ -78,7 +87,7 @@ body {
 .cover .text .sub-text p {
     margin: 0;
     font-family: var(--secondary-font);
-    color: var(--first-color);
+    color: var(--cover-main-color);
     opacity: 0;
     animation: fadeIn 2s ease forwards;
 }
@@ -103,7 +112,204 @@ body {
 }
 
 .cover hr {
-    color: var(--first-color);
-    opacity: 1;
+    color: var(--cover-main-color);
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
 }
 /* End Cover */
+
+/* Start About Me */
+/** Start About Me Main **/
+.about-me .about-me-main h1 {
+    color: var(--about-me-first-color);
+    font-family: var(--main-font);
+    font-size: 4rem;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.about-me .about-me-main hr {
+    color: var(--about-me-first-color);
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.about-me .about-me-main p {
+    color: var(--about-me-second-color);
+    font-family: var(--secondary-font);
+    font-size: 1.25rem;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.about-me .about-me-main .special {
+    color: var(--about-me-third-color);
+}
+
+.about-me .about-me-main .about-me-img {
+    height: 100%;
+    background-image: url(../imgs/about-me-img.jpg);
+    background-size: cover;
+    background-position-x: -275px;
+    border-radius: 25px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+    transition: 0.2s;
+}
+/** End About Me Main **/
+
+/** Start About Me Skills **/
+.about-me .about-me-skills h1 {
+    text-align: center;
+    color: var(--about-me-first-color);
+    font-family: var(--main-font);
+    font-size: 4rem;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.about-me .about-me-skills hr {
+    color: var(--about-me-first-color);
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.about-me .about-me-skills .skill p {
+    color: white;
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.about-me .about-me-skills .skill .skill-levels .completed {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: var(--about-me-fourth-color);
+    animation: aboutMeSkillsFillIn 0.5s ease forwards;
+    transition: 0.2s;
+}
+
+.about-me .about-me-skills .skill .skill-levels .completed:hover {
+    transform: scale(125%);
+}
+
+.about-me .about-me-skills .skill .skill-levels .not-completed {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background-color: var(--about-me-fourth-color);
+    transition: 0.2s;
+}
+
+.about-me .about-me-skills .skill .skill-levels .not-completed:hover {
+    transform: scale(125%);
+}
+
+.about-me .about-me-skills .skill .html {
+    width: 50px;
+    height: 50px;
+    background-image: url(../imgs/html5.png);
+    transition: 0.2s;
+}
+
+.about-me .about-me-skills .skill .html:hover {
+    background-image: url(../imgs/html5-colored.png);
+    transform: scale(110%);
+}
+
+.about-me .about-me-skills .skill .css {
+    width: 50px;
+    height: 50px;
+    background-image: url(../imgs/css3.png);
+    transition: 0.2s;
+}
+
+.about-me .about-me-skills .skill .css:hover {
+    background-image: url(../imgs/css3-colored.png);
+    transform: scale(110%);
+}
+
+.about-me .about-me-skills .skill .sass {
+    width: 50px;
+    height: 50px;
+    background-image: url(../imgs/sass.png);
+    transition: 0.2s;
+}
+
+.about-me .about-me-skills .skill .sass:hover {
+    background-image: url(../imgs/sass-colored.png);
+    transform: scale(110%);
+}
+
+.about-me .about-me-skills .skill .js {
+    width: 50px;
+    height: 50px;
+    background-image: url(../imgs/javascript.png);
+    transition: 0.2s;
+}
+
+.about-me .about-me-skills .skill .js:hover {
+    background-image: url(../imgs/javascript-colored.png);
+    transform: scale(110%);
+}
+
+.about-me .about-me-skills .skill .ts {
+    width: 50px;
+    height: 50px;
+    background-image: url(../imgs/typescript.png);
+    transition: 0.2s;
+}
+
+.about-me .about-me-skills .skill .ts:hover {
+    background-image: url(../imgs/typescript-colored.png);
+    transform: scale(110%);
+}
+
+.about-me .about-me-skills .skill .csharp {
+    width: 50px;
+    height: 50px;
+    background-image: url(../imgs/csharp.png);
+    transition: 0.2s;
+}
+
+.about-me .about-me-skills .skill .csharp:hover {
+    background-image: url(../imgs/csharp-colored.png);
+    transform: scale(110%);
+}
+
+.about-me .about-me-skills .skill .mssqlserver {
+    width: 50px;
+    height: 50px;
+    background-image: url(../imgs/mssqlserver.png);
+    transition: 0.2s;
+}
+
+.about-me .about-me-skills .skill .mssqlserver:hover {
+    background-image: url(../imgs/mssqlserver-colored.png);
+    transform: scale(110%);
+}
+
+.about-me .about-me-skills .skill .dotnetcore {
+    width: 50px;
+    height: 50px;
+    background-image: url(../imgs/dotnetcore.png);
+    transition: 0.2s;
+}
+
+.about-me .about-me-skills .skill .dotnetcore:hover {
+    background-image: url(../imgs/dotnetcore-colored.png);
+    transform: scale(110%);
+}
+/** End About Me Skills **/
+
+.about-me hr {
+    color: var(--about-me-first-color);
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+/* End About Me */
