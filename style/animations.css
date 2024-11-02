@@ -1,0 +1,16 @@
+/* General Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header Animations */
+@keyframes headerSlideIn {
+    to {
+        transform: translateX(calc(var(--direction) * 590px)); /* Move to final position */
+        opacity: 1;
+    }
+}
+
+
