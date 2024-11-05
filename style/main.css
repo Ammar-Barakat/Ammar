@@ -9,6 +9,8 @@
     --about-me-second-color: #D0D2C5;
     --about-me-third-color: #1C4DCA;
     --about-me-fourth-color: #99B0BD;
+    --work-first-color: #885E38;
+    --work-second-color: #F0B269;
 
     --main-font: 'GeneralSans-Semibold';
     --main-font-medium: 'GeneralSans-Medium';
@@ -176,6 +178,11 @@ hr {
     animation: fadeIn 2s ease forwards;
 }
 
+.about-me .about-me-skills .skill {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
 .about-me .about-me-skills .skill p {
     color: white;
     font-family: var(--secondary-font);
@@ -189,7 +196,7 @@ hr {
     margin-right: 5px;
     border-radius: 50%;
     background-color: var(--about-me-fourth-color);
-    animation: aboutMeSkillsFillIn 0.5s ease forwards;
+    animation: aboutMeSkillsFillIn 0.5s 0.2s ease forwards;
     transition: 0.2s;
 }
 
@@ -313,3 +320,210 @@ hr {
     animation: fadeIn 2s ease forwards;
 }
 /* End About Me */
+
+/* Start Work */
+/** Start Work Main **/
+.work .work-main h1 {
+    text-align: end;
+    color: var(--work-first-color);
+    font-family: var(--main-font);
+    font-size: 4rem;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.work .work-main hr {
+    color: var(--work-first-color);
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.work .work-main p {
+    color: var(--work-second-color);
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.work .work-main .project {
+    position: relative;
+}
+
+.work .work-main .project:hover .overlay {
+    width: 50%;
+    border-radius: 25px 0 0 25px;
+}
+
+.work .work-main .project .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(18,23,2) 25%, rgba(0,0,0,1) 100%);
+    border-radius: 25px;
+    transition: 0.2s;
+}
+
+.work .work-main .project .overlay .text small {
+    color: var(--work-first-color);
+    font-family: var(--secondary-font);
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.work .work-main .project .overlay .text h4 {
+    color: var(--work-second-color);
+    font-family: var(--main-font);
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.work .work-main .project .overlay .text h6 {
+    color: var(--work-second-color);
+    font-family: var(--main-font-medium);
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.work .work-main .project .overlay .text a {
+    color: var(--work-first-color);
+    font-family: var(--secondary-font);
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.work .work-main .project .overlay .text .icons img {
+    width: 25px;
+    height: 25px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.work .work-main .work-img {
+    height: 100%;
+    background-image: url(../imgs/work-img.jpg);
+    background-size: cover;
+    border-radius: 25px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+/** End Work Main **/
+
+/** Start Work Services **/
+.work .work-services h1 {
+    text-align: center;
+    color: var(--work-first-color);
+    font-family: var(--main-font);
+    font-size: 4rem;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.work .work-services hr {
+    color: var(--work-first-color);
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.work .work-services .services {
+    display: flex;
+    justify-content: space-between;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.work .work-services .services .service {
+    width: calc((100% / 3) - 10px);
+    height: 400px;
+    border-radius: 25px;
+    position: relative;
+}
+
+.work .work-services .services .service .overlay {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg, rgba(18,23,2,1) 25%, rgba(18,23,2,1) 50%, rgba(0,0,0,1) 100%);
+    opacity: 1;
+    border-radius: 25px;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+}
+
+.work .work-services .services .service .overlay-hover {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(0deg, #885E38 25%, #F0B269 100%);
+    opacity: 0;
+    border-radius: 25px;
+    position: absolute;
+    transition: 0.2s ease-in-out;
+}
+
+.work .work-services .services .service .overlay-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0.8;
+    z-index: 0;
+    transition: 0.2s;
+}
+
+.work .work-services .services .service .overlay-hover-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    z-index: 0;
+    transition: 0.2s;
+}
+
+.work .work-services .services .service .box .text {
+    z-index: 1;
+}
+
+.work .work-services .services .service .box .text h3 {
+    color: var(--work-second-color);
+    font-family: var(--main-font);
+    transition: 0.2s;
+}
+
+.work .work-services .services .service .box .text p {
+    color: white;
+    font-family: var(--secondary-font);
+    transition: 0.2s;
+}
+
+.work .work-services .services .service:hover .overlay {
+    opacity: 0;
+}
+
+.work .work-services .services .service:hover .overlay-hover {
+    opacity: 1;
+}
+
+.work .work-services .services .service:hover .overlay-img {
+    opacity: 0;
+}
+
+.work .work-services .services .service:hover .overlay-hover-img {
+    opacity: 0.8;
+}
+
+.work .work-services .services .service:hover .text h3 {
+    color: #121603;
+}
+
+.work .work-services .services .service:hover .text p {
+    color: black;
+}
+/** End Work Services **/
+
+.work hr {
+    color: var(--work-first-color);
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+/* End Work */
