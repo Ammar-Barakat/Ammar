@@ -11,6 +11,8 @@
     --about-me-fourth-color: #99B0BD;
     --work-first-color: #885E38;
     --work-second-color: #F0B269;
+    --contact-first-color: #A53571;
+    --contact-second-color: #D2B2B2;
 
     --main-font: 'GeneralSans-Semibold';
     --main-font-medium: 'GeneralSans-Medium';
@@ -527,3 +529,125 @@ hr {
     animation: fadeIn 2s ease forwards;
 }
 /* End Work */
+
+/* Start Contact */
+.contact .contact-main h1 {
+    color: var(--contact-first-color);
+    font-family: var(--main-font);
+    font-size: 4rem;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.contact .contact-main hr {
+    color: var(--contact-first-color);
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.contact .contact-main .link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.contact .contact-main .link h3 {
+    margin-right: 0.5em;
+    color: var(--contact-second-color);
+    font-family: var(--main-font);
+    transition: 0.1s;
+}
+
+.contact .contact-main .link:hover h3 {
+    word-spacing: 0.2rem;
+    margin-left: 0.2em;
+}
+
+.contact .contact-main h4 {
+    color: var(--contact-first-color);
+    font-family: var(--main-font);
+    font-size: 2rem;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.contact .contact-main .socials {
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.contact .contact-main .socials .social a {
+    color: var(--contact-second-color);
+    font-family: var(--main-font-medium);
+    font-size: 1.25rem;
+    transition: 0.1s;
+}
+
+.contact .contact-main .socials .social a:hover {
+    color: var(--contact-first-color);
+}
+
+.contact .contact-main .socials .social p {
+    color: var(--contact-second-color);
+    font-family: var(--main-font-medium);
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.contact .contact-main .contact-small-img {
+    width: 100%;
+    height: 200px;
+    background-image: url(../imgs/contact-small-img.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.contact .contact-img {
+    width: 100%;
+    height: 100%;
+    background-image: url(../imgs/contact-img.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+/* End Contact */
+
+/* Start Footer */
+.footer {
+    width: 100%;
+    height: 550px;
+    background-image: url(../imgs/footer-img.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    opacity: 0;
+    animation: fadeIn 2s ease forwards;
+}
+
+.footer .links a {
+    color: black;
+    font-family: var(--main-font-medium);
+    font-size: 2rem;
+}
+
+.footer img {
+    margin-top: 5em;
+    position: relative;
+}
+
+.footer h1 {
+    color: black;
+    font-family: var(--main-font);
+    font-size: 2rem;
+    position: absolute;
+}
+/* End Footer */
